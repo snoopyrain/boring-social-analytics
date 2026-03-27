@@ -6,17 +6,26 @@ metadata:
   openclaw:
     emoji: "📊"
     homepage: https://boring-doc.aiagent-me.com/getting-started/mcp.html
+    requires:
+      config:
+        - MCP Connector link from boring.aiagent-me.com (contains embedded auth token)
 ---
 
 # Boring Social Analytics
 
 Track performance and engagement across all your social media platforms. Powered by [Boring](https://boring-doc.aiagent-me.com).
 
+## Security & Data Handling
+
+- **MCP link is a credential**: Your MCP Server URL contains an embedded authentication token. Treat it like a password — do not share it publicly. Regenerate anytime in Settings.
+- **Data flow**: Analytics queries are sent from Boring's server to social media platform APIs (Facebook, Instagram, Threads, YouTube, TikTok) on your behalf. Only performance metrics are retrieved — no content is uploaded.
+- **No local credentials**: No local API keys or environment variables needed. All auth is embedded in the MCP link.
+
 ## Prerequisites
 
 1. **Sign up** at [boring.aiagent-me.com](https://boring.aiagent-me.com) with Google
 2. **Connect accounts** — supports Facebook, Instagram, Threads, YouTube, TikTok
-3. **Get your MCP link**: Go to **Settings** → copy your MCP Server URL (looks like `https://boring.aiagent-me.com/mcp/t/xxxxx...`)
+3. **Get your MCP link**: Go to **Settings** → copy your MCP Server URL (contains your auth token — treat it like a password)
 4. **Add to Claude**: Paste the MCP link as a Connector — no install, no API key needed
 
 ## Available Analytics Tools
