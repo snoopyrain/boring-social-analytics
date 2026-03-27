@@ -18,7 +18,7 @@ Track performance and engagement across all your social media platforms. Powered
 ## Prerequisites
 
 1. **Get your API key** at [boring.aiagent-me.com](https://boring.aiagent-me.com) → Settings → Generate API Key
-2. **Install**: `pip install boring-mcp-server`
+2. **Add Remote MCP**: Add Boring MCP link `https://boring.aiagent-me.com/mcp` to Claude settings (no local install needed)
 3. **Set** `BORING_API_KEY` environment variable
 4. **Connect accounts** at [boring.aiagent-me.com](https://boring.aiagent-me.com) — supports Facebook, Instagram, Threads, YouTube, TikTok
 
