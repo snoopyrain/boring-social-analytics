@@ -145,7 +145,7 @@ When the user asks to compare platforms, fetch `boring_get_performance` for each
 
 | Error | Solution |
 |-------|----------|
-| `InvalidApiKey` | Verify BORING_API_KEY |
+| `InvalidApiKey` | MCP link may be invalid — regenerate it at boring.aiagent-me.com Settings |
 | `InvalidAccountId` | Run `boring_list_accounts` to get valid IDs |
 | `TokenExpired` | Reconnect account at boring.aiagent-me.com |
 | No data returned | Account may be newly connected — data collection runs daily at 2 AM |
