@@ -1,6 +1,6 @@
 ---
-name: boring-social-analytics
-description: "Track social media performance and analytics across platforms using Boring. Use when the user says 'show my analytics', 'check social media performance', 'how are my posts doing', 'engagement report', 'post metrics', 'view stats', or wants to see performance data for Facebook, Instagram, Threads, YouTube, or TikTok accounts."
+name: social-media-analytics
+description: "Track social media performance and analytics across all platforms. Use when the user says 'show my analytics', 'check social media performance', 'how are my posts doing', 'engagement report', 'post metrics', 'view stats', or wants to see performance data for Facebook, Instagram, Threads, YouTube, or TikTok accounts."
 version: 1.0.0
 metadata:
   openclaw:
@@ -17,9 +17,12 @@ Track performance and engagement across all your social media platforms. Powered
 
 ## Security & Data Handling
 
-- **MCP link is a credential**: Your MCP Server URL contains an embedded authentication token. Treat it like a password — do not share it publicly. Regenerate anytime in Settings.
-- **Data flow**: Analytics queries are sent from Boring's server to social media platform APIs (Facebook, Instagram, Threads, YouTube, TikTok) on your behalf. Only performance metrics are retrieved — no content is uploaded.
-- **No local credentials**: No local API keys or environment variables needed. All auth is embedded in the MCP link.
+- **MCP link is a credential**: Your MCP Server URL (`https://boring.aiagent-me.com/mcp/t/xxxxx...`) contains an embedded authentication token. Treat it like a password — do not share it publicly.
+- **Token scope**: The embedded token is **read-only** for analytics. It can only fetch performance metrics and account metadata. It cannot publish, delete, or modify any content on your social media accounts.
+- **Token storage**: The token is stored server-side in Boring's database (MongoDB on DigitalOcean). It is never written to your local filesystem. You can regenerate or revoke it anytime at [boring.aiagent-me.com/settings](https://boring.aiagent-me.com/settings).
+- **Data flow**: Analytics queries are sent from Boring's server (Google Cloud, us-central1) to the platform's API on your behalf. Only performance metrics are retrieved — no content is uploaded or modified.
+- **No local credentials**: No local API keys, environment variables, or secrets are needed. All auth is embedded in the MCP link.
+- **Third-party service**: This skill relies on [Boring](https://boring.aiagent-me.com), an open-source social media management tool. Source code: [github.com/snoopyrain](https://github.com/snoopyrain).
 
 ## Prerequisites
 
